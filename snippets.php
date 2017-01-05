@@ -39,6 +39,7 @@ function fix_missed_schedule() {
 	}
 }
 add_action('hook_fix_missed_schedule', 'fix_missed_schedule');
+
 /*
 *END SNIPPET
 */
