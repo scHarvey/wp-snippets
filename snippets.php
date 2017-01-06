@@ -22,8 +22,6 @@ function my_activation() {
 }
 add_action('wp', 'my_activation');
 
-
-
 //function to find all posts in the post table that have missed their scheduled post date and go ahead and publish them
 
 function fix_missed_schedule() {
