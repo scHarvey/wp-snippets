@@ -40,3 +40,25 @@ add_action('hook_fix_missed_schedule', 'fix_missed_schedule');
 /*
 *END SNIPPET
 */
+
+
+/*
+Simple Logging with Loggly
+*/
+
+      //loggly logging
+      $http_details = array( 'request' => array( 'url' => $url, 'args' => $args ), 'response' => $request );
+      wp_remote_post( 'http://logs-01.loggly.com/inputs/7a88b5b7-ac63-4d12-95dd-4dd3b17e5337/tag/http/', array(
+              'method' => 'POST',
+              'timeout' => 3,
+              'redirection' => 5,
+              'httpversion' => '1.0',
+              'blocking' => false,
+              'headers' => array('Content-Type' =>'text/plain'),
+              'body' => json_encode($http_details)
+          )
+      );
+
+/*
+*END SNIPPET
+*/
