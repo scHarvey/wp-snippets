@@ -47,7 +47,7 @@ Simple Logging with Loggly
 */
 
       //loggly logging
-      $http_details = array( 'request' => array( 'url' => $url, 'args' => $args ), 'response' => $request );
+      $http_details = array( 'something_to_log' => $something_to_log );
       wp_remote_post( 'http://logs-01.loggly.com/inputs/7a88b5b7-ac63-4d12-95dd-4dd3b17e5337/tag/http/', array(
               'method' => 'POST',
               'timeout' => 3,
